@@ -2,7 +2,6 @@ import java.util.Scanner;
 public class TP1 {
     public static void main(String[] args) {
         //////////////exercice 1////////////
-/*
         float []TH;
         float SN;
         float SB;
@@ -180,7 +179,7 @@ public class TP1 {
             System.out.print("Plus petit ! !");
         else if (nbr1>20)
             System.out.print("Plus grand !");
-*/
+
 ////////////////////////exercice 9 comme 5 partie I//////////
 
 ////////////////////////exercice 10//////////
@@ -192,7 +191,7 @@ public class TP1 {
               for (int i=1;i<=l;i++){
                  for (int j=1;j<=l;j++) {
                      if (i==1 ||j==1 || i==l || j==l){
-                     System.out.print("*  ");
+                     System.out.print("* ");
                      }else {
                          System.out.print("  ");
                      }
@@ -201,7 +200,7 @@ public class TP1 {
         }
 
   //parie II
-      /*  for (int i=1;i<=l;i++){
+       for (int i=1;i<=l;i++){
             for (int j=1;j<=l;j++) {
                 if (i==1 ||j==1 || i==l || j==l || i==j || j==l-i+1){
                     System.out.print(" *");
@@ -212,7 +211,8 @@ public class TP1 {
             System.out.print("\n");
         }
 
-*/
+
+
 
 
 
