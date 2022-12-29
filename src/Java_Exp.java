@@ -1,3 +1,4 @@
+////////////////Séance 1 de Java ////////////
 import java.util.Scanner;
 public class Java_Exp {
         public static void main(String[] args) {
