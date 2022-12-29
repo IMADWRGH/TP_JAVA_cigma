@@ -2,7 +2,7 @@ package Encapsulation;
 
 public class Album {
     private String name;
-    private String  artist;
+    private String  artists;
     private double price;
     private int numberOfCopies;
     public void sellCopies(int numberOfCopies)
@@ -26,10 +26,10 @@ public class Album {
         this.name = name;
     }
     public String getArtist() {
-        return artist;
+        return artists;
     }
     public void setArtist(String artist) {
-        this.artist = artist;
+        this.artists = artist;
     }
     public double getPrice() {
         return price;
