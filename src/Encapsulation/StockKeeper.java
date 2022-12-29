@@ -7,7 +7,7 @@ public class StockKeeper {
         this.name = name;
     }
     Album album=new Album();
-    public void manageAlbum(Album album, String name, String artist, double price, int numberOfCopies)
+    public void manageAlbum( String name, String artist, double price, int numberOfCopies)
     // Même code et différence de syntaxe ::: public void manageAlbum(Album album, String name, String artist, double price, int numberOfCopies)
     {
         this.album.setName(name);
