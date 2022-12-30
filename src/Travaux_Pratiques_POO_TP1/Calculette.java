@@ -18,12 +18,7 @@ public class Calculette {
 
         public double Division()
         {
-            double result;
-            if (nbr2>0)
-            { result= nbr1/nbr2;}
-            else
-            { result = 0.0d;}
-            return result;
+            return nbr1/nbr2;
         }
 
         public double Soustration()
@@ -40,13 +35,15 @@ public class Calculette {
             this.nbr1 = nbr1;
             this.nbr2 = nbr2;
         }
-
-        public static void main(String[] args) {
-            //double r1,r2,r3,r4;
-            Calculette C=new Calculette(1.5,1.5);
-            C.setnbr(2.25,10);
+    public static void main(String[] args) {
+            Calculette C=new Calculette(8,0);
+            C.setnbr(1,0);
             System.out.println("La somme est : "+C.Addition());
-            System.out.println("La divition  est : "+C.Division());
+            try{
+                System.out.println("La divition  est : "+C.Division());
+            }catch (Exception ex){
+                System.out.println("Divition par 0 est impossiple");
+            }
             System.out.println("La soustration est : "+C.Soustration());
             System.out.println("La multiplication  est : "+C.Multiplication());
 
