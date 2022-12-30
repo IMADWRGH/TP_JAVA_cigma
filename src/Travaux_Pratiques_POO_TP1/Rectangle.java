@@ -9,15 +9,17 @@ public class Rectangle {
         this.largeur=largeur;
         this.longueur=longueur;
     }
-    public int SurfaceRectangle()
+    public int Surface()
     {
         return longueur*largeur;
     }
+    public  int Perimetre(){return( longueur+largeur )*2 ;}
 
     public static void main(String[] args) {
         Rectangle R=new Rectangle();
         R.setLongLarg(10,10);
-        System.out.print("la surface de rectangle est "+R.SurfaceRectangle()+" m²");
+        System.out.println("la surface de rectangle est "+R.Surface()+" m²");
+        System.out.println("la Perimetre de rectangle est "+R.Perimetre()+" m²");
     }
 
 
