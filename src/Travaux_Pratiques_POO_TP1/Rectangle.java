@@ -1,3 +1,4 @@
+/////////////////////Séance 2 de Java: Exercie 1 ///////////////////
 package Travaux_Pratiques_POO_TP1;
 
 public class Rectangle {
