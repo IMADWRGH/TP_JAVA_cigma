@@ -9,7 +9,7 @@ public class Examen {
 
     public void Afficher()
     {
-        System.out.println("Code "+code+" Duree :"+duree+" Date  :"+date);
+        System.out.println(" { Code "+code+" Duree :"+duree+" Date  :"+date+" }");
     }
     public Examen() {
         this.code = 0;
