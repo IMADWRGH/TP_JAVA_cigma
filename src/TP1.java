@@ -29,8 +29,8 @@ public class TP1 {
         System.out.print("Salaire Brut    :  "+SB+" "+"  Retenue : "+Retenue+"  Salaire  net  "+SN);
 
         //////////////exercice 2////////////?????
-       float P, D;//P:Poids //D:Duree
-        float Prix_N,Prix_Sup;
+       double P, D;//P:Poids //D:Duree
+        double Prix_N,Prix_Sup;
         Scanner data;
         data = new Scanner(System.in);
         System.out.print("Entrez le Poids du passager :");
@@ -39,21 +39,22 @@ public class TP1 {
         D = data.nextInt();
         System.out.print("Entrez le prix de billet:");
         Prix_N= data.nextInt();
-        if (75>P) {
-                if (D<3)
-                    Prix_Sup=Prix_N+(P*1);
+        if(P<=75)
+            Prix_Sup = Prix_N;
+        else if (P <= 90)
+                if (D < 3)
+                    Prix_Sup = Prix_N + (P - 75);
                 else
-                    Prix_Sup= (float) (Prix_N+(P-75)*1.5);
-        }else if (P<=90) {
-            if (D < 3)
-                Prix_Sup = Prix_N + (P - 90) * 2;
+                    Prix_Sup = Prix_N + (P - 75) * 1.5;
+            else if (D < 3)
+                Prix_Sup = Prix_N + 15 + (P - 90) * 2;
+            else if (D < 6)
+                Prix_Sup = Prix_N + 22.5 + (P - 90) * 2.5;
             else
-                Prix_Sup = (float) (Prix_N + (P - 90) * 2.5);
-        }
-        else{
-            Prix_Sup=Prix_N+(P-90)*3;
-        }
-        System.out.print("le prix d’un billet :"+Prix_Sup);
+                Prix_Sup = Prix_N + 22.5 + (P - 90) * 3;
+
+            System.out.println("Le prix à payer est de " + Prix_Sup + " Euro");
+
 //////////////////exercice 3////////////
         //partie 2
         int a;
@@ -129,8 +130,13 @@ public class TP1 {
         System.out.print(mt+"="+c+"^"+u+" "+d+"^"+u+" "+u+"^"+u);
 
 //////////////////exercice 6 ////////////??????????????
-
-//////////////////exercice 7 ////////////
+        /*Scanner nbr_amis=new Scanner(System.in);
+        int X,Y;
+        System.out.print("Le nombre I :");
+        X=nbr_amis.nextInt();
+        System.out.print("Le nombre II :");
+        Y=nbr_amis.nextInt();*/
+        //////////////////exercice 7 ////////////
       int N,t=0;
         Scanner nParfait;
         nParfait = new Scanner(System.in);
