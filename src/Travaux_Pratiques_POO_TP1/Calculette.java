@@ -35,19 +35,22 @@ public class Calculette {
             this.nbr1 = nbr1;
             this.nbr2 = nbr2;
         }
-    public static void main(String[] args) {
-            Calculette C=new Calculette(8,0);
-            C.setnbr(1,0);
-            System.out.println("La somme est : "+C.Addition());
+        void Afficher()
+        {
+            System.out.println("La somme est : "+Addition());
             try{
-                System.out.println("La divition  est : "+C.Division());
-            }catch (Exception ex){
-                System.out.println("Divition par 0 est impossiple");
+                Division();
+                System.out.println("La divition  est : "+Division());
+            }catch (ArithmeticException ex){
+                System.out.println("Divition par 0 est impossiple"+ex.getMessage());
             }
-            System.out.println("La soustration est : "+C.Soustration());
-            System.out.println("La multiplication  est : "+C.Multiplication());
+            System.out.println("La soustration est : "+Soustration());
+            System.out.println("La multiplication  est : "+Multiplication());
 
-
+        }
+    public static void main(String[] args) {
+            Calculette C=new Calculette(8,2);
+            C.Afficher();
         }
     }
 
