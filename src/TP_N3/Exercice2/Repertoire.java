@@ -3,7 +3,7 @@ package TP_N3.Exercice2;
 public class Repertoire {
     private String nom;
     private int nbr_fichiers;
-    private Fichier [] ref_file;
+    private Fichier [] ref_file=new Fichier[30];
 
     public Repertoire(String nom) {
         this.nom = nom;
