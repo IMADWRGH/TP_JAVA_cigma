@@ -38,4 +38,45 @@ public class Repertoire {
                 ref_file[i].Affiche();
 
     }
+    public int Supprimer(String nom)
+    {
+        int result=Rechercher(nom);
+        if (result==1)
+            for (int i=0;i<this.nbr_fichiers;i++)
+            {
+                ref_file[i]=ref_file[i+1];
+                this.nbr_fichiers--;
+                return 1;
+            }
+        return 0;
+    }
+
+    public void Renommer(String newNom,String oldNom)
+    {
+        int result=Rechercher(oldNom);
+        if (result==1)
+         ref_file[result].setNom(newNom);
+        else
+            System.out.println("Le fichier "+oldNom+" n'est existe pas");
+    }
+
+    public int Modifier(String nom,float taille)
+    {
+        int result=Rechercher(nom);
+        if (result==1) {
+            ref_file[result].setTaille(taille);
+            return 1;
+        }
+        else {
+            System.out.println("Le fichier " + nom + " n'est existe pas");
+            return -1;
+        }
+    }
+    public float getTaille() {
+        float tailleMo = 0;
+        for (int i = 0; i < this.nbr_fichiers; i++) {
+            tailleMo = ref_file[i].getTaille() / 1024;
+        }
+        return tailleMo;
+    }
 }
