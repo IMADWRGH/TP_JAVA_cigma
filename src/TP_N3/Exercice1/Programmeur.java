@@ -1,5 +1,7 @@
 package TP_N3.Exercice1;
 
+import java.util.Arrays;
+
 public class Programmeur {
     private int id;
     private String nom;
@@ -53,7 +55,7 @@ public class Programmeur {
             CC[i].setNr_tasses(0);
         }
     }
-    public void Affichre ()
+    public void Afficher ()
     {
         System.out.println("ID : "+this.id+" Nom :"+this.nom+" Prenom :"+this.prenom+" Bureau : "+this.bureau);
         System.out.println("le nombre de tasses de café consommées par semaine  :");
@@ -61,11 +63,6 @@ public class Programmeur {
         {
             System.out.println("Semain "+CC[i].getNo_ssemaine()+": "+CC[i].getNr_tasses()+" tasse.");
         }
-    }
-
-    @Override
-    public String toString() {
-        return "Programmeur{" +"id=" + id +", nom='" + nom + '\'' +", prenom='" + prenom + '\'' +", bureau=" + bureau +'}';
     }
 
 
