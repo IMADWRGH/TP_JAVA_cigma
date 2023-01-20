@@ -9,6 +9,7 @@ public class Programmeur {
     private int bureau;
     Consos_Cafe [] CC;
     private static int num_id=1;
+    static int semaine=1;
 
     public int getId() {
         return id;
@@ -47,7 +48,7 @@ public class Programmeur {
         this.nom = nom;
         this.prenom = prenom;
         this.bureau = bureau;
-        CC=new Consos_Cafe[10];
+        CC=new Consos_Cafe[semaine];
         for (int i=0;i<CC.length;i++)
         {
             CC[i]=new Consos_Cafe();

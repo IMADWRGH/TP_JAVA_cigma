@@ -1,14 +1,14 @@
 package TP_N3.Exercice1;
 
 public class Consos_Cafe {
-    private int no_ssemaine;
+    private int no_semaine;
     private int nr_tasses;
     Programmeur[] Pr;
     public int getNo_ssemaine() {
-        return no_ssemaine;
+        return no_semaine;
     }
     public void setNo_ssemaine(int no_ssemaine) {
-        this.no_ssemaine = no_ssemaine;
+        this.no_semaine = no_ssemaine;
     }
 
     public int getNr_tasses() {
@@ -22,7 +22,7 @@ public class Consos_Cafe {
 
     public void Afficher ()
     {
-        System.out.print("Numero de semaine : "+this.no_ssemaine+" Nombres des tasses : "+this.nr_tasses);
+        System.out.print("Numero de semaine : "+this.no_semaine+" Nombres des tasses : "+this.nr_tasses);
     }
 
 

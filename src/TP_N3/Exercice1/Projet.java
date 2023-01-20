@@ -12,6 +12,7 @@ public class Projet {
         this.sujet = sujet;
         this.duree = duree;
         this.nbr_pr=0;
+        Programmeur.semaine=this.duree;
     }
     public void Ajouter(Programmeur Pr)
     {
@@ -28,42 +29,51 @@ public class Projet {
                 return i;
         return -1;
     }
-    public void Affiche(int id)
+    public void Afficher(int id)
     {
         int indice=Rechercher(id);
         if (indice!=-1)
             Pr[indice].Afficher();
         else
-            System.out.println("Error");
+            System.out.println("L'identifiant n'existe pas");
     }
-    public void Supprimer(Programmeur Pr)
+    public void Supprimer(int id)
     {
-        int indice=Rechercher(Pr.getId());
+        int indice=Rechercher(id);
         if (indice!=-1) {
-            this.Pr[indice] = this.Pr[nbr_pr + 1];
+            for (int i=0 ;i<nbr_pr-1;i++) {
+                this.Pr[i] = this.Pr[i + 1];
+            }
             nbr_pr--;
         }
         else {
             System.out.println("Error");
         }
     }
-    public void Changer_bureau(int newB,int oldB)
+    public void Changer_bureau(int id,int newB)
     {
-        for (int i=0;i<nbr_pr;i++)
+        int result =Rechercher(id);
+        if (result!=-1)
         {
-            if (this.Pr[i].getBureau()==oldB)
-            {
-                this.Pr[i].setBureau(newB);
-            }else
-            {
-                System.out.println("Ce bureau n'existe pas");
-            }
+            Pr[id].setBureau(newB);
         }
+        else
+            System.out.println("Error");
     }
     public void Afficher_liste(){
         System.out.println("Code du projet: "+code+" Sujet: "+sujet+" et la duree  "+this.duree+" J");
         for(int i=0;i<nbr_pr;i++)
             Pr[i].Afficher();
+    }
+    public void Afficher_liste(int semaine)
+    {
+        System.out.println("Code du projet: "+code+" Sujet: "+sujet+" et la duree  "+this.duree+" J");
+
+            for (int i = 0; i < nbr_pr; i++){
+
+
+
+        }
     }
 
 }
