@@ -27,14 +27,14 @@ public class Repertoire {
     public int  Rechercher(String nom)
     {
         for (int i=0;i<this.nbr_fichiers;i++)
-            if (ref_file[i].getNom()==nom)
+            if (ref_file[i].getNom().equalsIgnoreCase(nom))
                 return i;
         return -1;
     }
     public void Rechercher()
     {
         for (int i=0;i<this.nbr_fichiers;i++)
-            if (ref_file[i].getExtension()=="pdf")
+            if (ref_file[i].getExtension().equalsIgnoreCase("pdf"))
                 ref_file[i].Affiche();
 
     }
