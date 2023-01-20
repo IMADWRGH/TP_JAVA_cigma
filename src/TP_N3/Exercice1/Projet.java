@@ -68,12 +68,27 @@ public class Projet {
     public void Afficher_liste(int semaine)
     {
         System.out.println("Code du projet: "+code+" Sujet: "+sujet+" et la duree  "+this.duree+" J");
-
-            for (int i = 0; i < nbr_pr; i++){
-
-
-
+        Programmeur pfl; //pfl: programmer just for loop
+            for(int i = 0; i < nbr_pr; i++)
+                for (int j=0;i<nbr_pr;j++)
+                    {
+                        if (Pr[i].CC[semaine - 1].getNr_tasses() < Pr[i].CC[semaine - 1].getNr_tasses())
+                        {
+                            pfl=Pr[i];
+                            Pr[i]=Pr[j];
+                            Pr[j]=pfl;
+                        }
+                        Afficher_liste();
+                    }
+    }
+    public void Afficher_total_cafeCons(int semaine)
+    {
+        int total=0;
+        for (int i=0;i<nbr_pr;i++)
+        {
+            total+=Pr[i].CC[semaine-1].getNr_tasses();
         }
+        System.out.println("le nombre total de tasses de café consommé est: "+total+" dans le semaine  "+semaine);
     }
 
 }
