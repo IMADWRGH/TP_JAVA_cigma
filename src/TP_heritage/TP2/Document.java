@@ -1,6 +1,6 @@
 package TP_heritage.TP2;
 
-public class Document {
+public  abstract class Document {
     private int  reference;
     private String titre;
 
