@@ -102,7 +102,7 @@ for (int i=0;i<nbr_d;i++)
 }
 }
 
-public void Trier_titre()
+public void Trier_titre()//pas terminé
 {
     for (int i=0 ;i< nbr_d;i++) {
         if (D[i].getTitre().contentEquals(D[i].getTitre()))
