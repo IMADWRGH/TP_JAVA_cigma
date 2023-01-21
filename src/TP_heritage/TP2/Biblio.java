@@ -1,6 +1,6 @@
 package TP_heritage.TP2;
 
-public class Biblio{
+public class Biblio implements IBiblio{
   private  Document[] D;
   private int nbr_d;
 
@@ -101,5 +101,27 @@ for (int i=0;i<nbr_d;i++)
     D[i].description();
 }
 }
+
+public void Trier_titre()
+{
+    for (int i=0 ;i< nbr_d;i++) {
+        if (D[i].getTitre().contentEquals(D[i].getTitre()))
+        {
+            D[i].Afficher();
+        }
+    }
+}
+
+    @Override
+    public void Afficher(int ref) {
+        int reference=Rechercher(ref);
+        if (reference!=-1)
+        {
+            for (int i=0;i<nbr_d;i++)
+            {
+                D[i].Afficher();
+            }
+        }
+    }
 
 }
