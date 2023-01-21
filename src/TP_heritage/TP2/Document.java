@@ -32,7 +32,7 @@ public  void Afficher()
 
 public void description()
 {
-System.out.print(" la fiche de bibliothèque ");
+System.out.println(" la fiche de bibliothèque ");
 }
 
 
