@@ -87,10 +87,9 @@ public void Modifier(int reference,String titre)
   public void tousLesAuteurs()
   {
       for (int i=0 ;i< nbr_d;i++) {
-          if (D[i].getClass().equals(Dictionnaire.class))
-            System.out.println("le numéros de  Dictionnaire  : "+ D[i].getReference());
-          else
-              D[i].Afficher();
+          System.out.println("le numéros de  Dictionnaire  : "+ D[i].getReference()+" est son titre "+D[i].getTitre());
+          if (D[i] instanceof Livre)
+              System.out.println(" son auteur "+((Livre) D[i]).getAuteur());
 
       }
   }
