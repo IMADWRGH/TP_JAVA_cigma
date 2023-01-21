@@ -101,14 +101,23 @@ for (int i=0;i<nbr_d;i++)
 }
 }
 
-public void Trier_titre()//pas terminé
+public void Trier_titre()// must change this function
 {
-    for (int i=0 ;i< nbr_d;i++) {
-        if (D[i].getTitre().contentEquals(D[i].getTitre()))
-        {
-            D[i].Afficher();
+    Document expD;
+    boolean p=true;
+    while(p) {
+        p=false;
+        for (int i = 0; i < nbr_d-1; i++) {
+            if (D[i].getTitre().compareTo(D[i + 1].getTitre()) > 0) {
+                expD = D[i];
+                D[i] = D[i + 1];
+                D[i + 1] = expD;
+                p=true;
+            }
         }
     }
+
+
 }
 
     @Override
