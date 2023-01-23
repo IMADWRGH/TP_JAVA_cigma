@@ -64,6 +64,17 @@ private List<Etudiants> ListE =new ArrayList<Etudiants>();
             System.out.println("Code "+e.getCode()+" Nom "+e.getNom()+" Prenom "+e.getPrenom()+" Niveau "+e.getNiveau()+" moyenne Annuelle "+e.getMoyenneAnnuelle());
 
         }
-
+    }
+    public double  Salaire_supplementaire()
+    {
+        //: PA: 200 DH PH : 250 DH PES : 300 DH
+        double result=0;
+        switch(this.Grade)
+        {
+            case "PA": result=200*this.volume_horaire;
+            case "PH": result=250*this.volume_horaire;
+            case "PES" :result=300*this.volume_horaire;
+        }
+        return result;
     }
 }
