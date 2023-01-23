@@ -14,6 +14,47 @@ public class Etudiants {
         this.niveau = niveau;
         this.moyenneAnnuelle = moyenneAnnuelle;
     }
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public String getPrenom() {
+        return prenom;
+    }
+
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    public String getNiveau() {
+        return niveau;
+    }
+
+    public void setNiveau(String niveau) {
+        this.niveau = niveau;
+    }
+
+    public double getMoyenneAnnuelle() {
+        return moyenneAnnuelle;
+    }
+
+    public void setMoyenneAnnuelle(double moyenneAnnuelle) {
+        this.moyenneAnnuelle = moyenneAnnuelle;
+    }
+
     public void Afficher()
     {
         System.out.println(" les informations d'etudiant :");
