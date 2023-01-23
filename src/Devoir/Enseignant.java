@@ -13,6 +13,11 @@ private List<Etudiants> ListE =new ArrayList<>();
         Grade = grade;
         this.volume_horaire = volume_horaire;
     }
+    public void Afficher()
+    {
+        System.out.println("les informatons de Enseignant");
+        System.out.println("Code "+getCode()+" Nom "+getNom()+" Prenom "+getPrenom()+" Grade "+this.Grade+" Nombres de horaire qui travail "+this.volume_horaire);
+    }
 
     @Override
     public double Calculer_Salaire(int heures, double coefficient) {
