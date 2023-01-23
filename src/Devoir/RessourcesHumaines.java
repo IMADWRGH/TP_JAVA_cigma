@@ -18,10 +18,10 @@ private  List <Enseignant> GRH =new ArrayList<>();
 }
     public void Afficher_Enseignants()
 {
-    for(int i=0;i<GRH.size();i++)
+    for(Enseignant e : GRH)
     {
-        System.out.println("--------------------------------");
-        GRH.get(i).Afficher();
+        System.out.println("--------------------");
+        System.out.println("Code "+e.getCode()+" Nom "+e.getNom()+" Prenom "+e.getPrenom()+" Grade "+e.getGrade()+" Nombres de horaire qui travail "+e.getVolume_horaire());
     }
 
 }
