@@ -8,25 +8,30 @@ private  List <Enseignant> GRH =new ArrayList<>();
         this.nbr_E = nbr_E;
     }
 
-    public void Ajouter (Enseignant e)
-{
-    for(int i=0;i<nbr_E-1;i++)
-    {
-        GRH.add(e);
-    }
-
-}
     public void Afficher_Enseignants()
 {
     for(Enseignant e : GRH)
     {
-        System.out.println("--------------------");
-        System.out.println("Code "+e.getCode()+" Nom "+e.getNom()+" Prenom "+e.getPrenom()+" Grade "+e.getGrade()+" Nombres de horaire qui travail "+e.getVolume_horaire());
+        e.Afficher();
     }
 
 }
-   // Rechercher_Ens( ?)
+   public int  Rechercher_Ens(int code )
+   {
+       for (Enseignant e :GRH){
+           if (GRH.contains(e))
+               return GRH.indexOf(e);
+       }
+       return -1;
+   }
 
+  public void Ajouter_groupe(Enseignant e)
+  {
+      for (int i=0;i<nbr_E;i++)
+      {
+          GRH.add(e);
+      }
+  }
 
 
 
