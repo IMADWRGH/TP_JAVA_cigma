@@ -20,6 +20,7 @@ private  List <Enseignant> GRH =new ArrayList<>();
 {
     for(int i=0;i<GRH.size();i++)
     {
+        System.out.println("--------------------------------");
         GRH.get(i).Afficher();
     }
 
