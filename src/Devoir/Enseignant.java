@@ -13,6 +13,31 @@ private List<Etudiants> ListE =new ArrayList<Etudiants>();
         Grade = grade;
         this.volume_horaire = volume_horaire;
     }
+
+    public String getGrade() {
+        return Grade;
+    }
+
+    public void setGrade(String grade) {
+        Grade = grade;
+    }
+
+    public int getVolume_horaire() {
+        return volume_horaire;
+    }
+
+    public void setVolume_horaire(int volume_horaire) {
+        this.volume_horaire = volume_horaire;
+    }
+
+    public List<Etudiants> getListE() {
+        return ListE;
+    }
+
+    public void setListE(List<Etudiants> listE) {
+        ListE = listE;
+    }
+
     public void Afficher()
     {
         System.out.println("les informatons de Enseignant :");
@@ -33,10 +58,11 @@ private List<Etudiants> ListE =new ArrayList<Etudiants>();
     public void Afficher_etd()
     {
 
-        for(int i=0;i<ListE.size();i++)
+        for(Etudiants e : ListE )
         {
-            System.out.println("------------");
-            ListE.get(i).Afficher();
+            System.out.println("--------------------");
+            System.out.println("Code "+e.getCode()+" Nom "+e.getNom()+" Prenom "+e.getPrenom()+" Niveau "+e.getNiveau()+" moyenne Annuelle "+e.getMoyenneAnnuelle());
+
         }
 
     }
