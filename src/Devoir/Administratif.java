@@ -7,7 +7,7 @@ public class Administratif extends Personnel{
     }
 
     @Override
-    public double Calculer_Salaire(int heures, double coefficient) {
+    public double Calculer_Salaire(double coefficient) {
         return 0;
     }
 }

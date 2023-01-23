@@ -34,5 +34,5 @@ public abstract class Personnel {
         this.nom = nom;
         this.prenom = prenom;
     }
-    public abstract double Calculer_Salaire(int heures, double coefficient);
+    public abstract double Calculer_Salaire(double coefficient);
 }
