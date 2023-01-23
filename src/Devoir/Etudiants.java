@@ -14,4 +14,9 @@ public class Etudiants {
         this.niveau = niveau;
         this.moyenneAnnuelle = moyenneAnnuelle;
     }
+    public void Afficher()
+    {
+        System.out.println(" les informations d'etudiant :");
+        System.out.println("Code "+this.code+" Nom "+this.nom+" Prenom "+this.prenom+" Niveau "+this.niveau+" moyenne Annuelle "+this.moyenneAnnuelle);
+    }
 }
