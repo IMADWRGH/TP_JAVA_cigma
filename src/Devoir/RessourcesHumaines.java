@@ -16,13 +16,10 @@ private  List <Enseignant> GRH =new ArrayList<>();
     }
 
 }
-   public int  Rechercher_Ens(int code )
+   public int  Rechercher_Ens(Enseignant e )
    {
-       for (Enseignant e :GRH){
-           if (GRH.contains(e))
                return GRH.indexOf(e);
-       }
-       return -1;
+
    }
 
   public void Ajouter_groupe(Enseignant e)
