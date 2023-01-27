@@ -68,12 +68,8 @@ private List<Etudiants> ListE =new ArrayList<Etudiants>();
     }
     public void Afficher_etd()
     {
-
-        for(Etudiants e : ListE )
-        {
-            System.out.println("--------------------");
-            System.out.println("Code "+e.getCode()+" Nom "+e.getNom()+" Prenom "+e.getPrenom()+" Niveau "+e.getNiveau()+" moyenne Annuelle "+e.getMoyenneAnnuelle());
-
+        for(Etudiants e:ListE) {
+            e.Afficher();
         }
     }
     public double  Salaire_supplementaire()
@@ -89,4 +85,5 @@ private List<Etudiants> ListE =new ArrayList<Etudiants>();
         }
         return result;
     }
+
 }
