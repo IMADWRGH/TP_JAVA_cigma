@@ -35,4 +35,9 @@ public abstract class Personnel {
         this.prenom = prenom;
     }
     public abstract double Calculer_Salaire(double coefficient);
+
+    public void Afficher(){
+        System.out.println("les informations personnelles :");
+        System.out.print("Code :"+this.code+"Nom"+this.nom+"Prenom"+this.prenom);
+    }
 }
