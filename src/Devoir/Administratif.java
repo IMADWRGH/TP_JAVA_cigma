@@ -8,11 +8,11 @@ public class Administratif extends Personnel{
     }
 
     @Override
-    public double Calculer_Salaire(double coefficient) {
-        return coefficient* super.getSalaire();
+    public double Calculer_Salaire() {
+        return getSalaire()+getPrime();
     }
     public void Afficher(){
-        System.out.println("les informatons de Administratif : "+super.getCode());
+        System.out.println("les informatons de Administratif : ");
         System.out.println("Code "+getCode()+" Nom "+getNom()+" Prenom "+getPrenom()+"Bureau "+getBureau()+"Salaire "+getSalaire()+"Prime "+getPrime());
     }
 }
