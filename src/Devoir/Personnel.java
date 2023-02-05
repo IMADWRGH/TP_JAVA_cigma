@@ -68,6 +68,6 @@ public abstract class Personnel {
     public abstract double Calculer_Salaire();
 
     public void Afficher(){
-        System.out.print("Code  "+this.code+" Nom "+this.nom+" Prenom "+this.prenom+" Bureau "+this.bureau+" Salaire "+this.salaire+" Prime "+this.prime);
+        System.out.println("Code  "+this.code+" Nom "+this.nom+" Prenom "+this.prenom+" Bureau "+this.bureau+" Salaire "+this.salaire+" Prime "+this.prime);
     }
 }
