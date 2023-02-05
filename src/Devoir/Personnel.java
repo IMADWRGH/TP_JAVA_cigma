@@ -4,6 +4,9 @@ public abstract class Personnel {
     private int code;
     private String nom;
     private String prenom;
+    private int bureau;
+    private double salaire;
+    private  double prime;
 
     public int getCode() {
         return code;
@@ -29,15 +32,43 @@ public abstract class Personnel {
         this.prenom = prenom;
     }
 
-    public Personnel(int code, String nom, String prenom) {
+    public int getBureau() {
+        return bureau;
+    }
+
+    public void setBureau(int bureau) {
+        this.bureau = bureau;
+    }
+
+    public double getSalaire() {
+        return salaire;
+    }
+
+    public void setSalaire(double salaire) {
+        this.salaire = salaire;
+    }
+
+    public double getPrime() {
+        return prime;
+    }
+
+    public void setPrime(double prime) {
+        this.prime = prime;
+    }
+
+    public Personnel(int code, String nom, String prenom, int bureau, double salaire, double prime) {
         this.code = code;
         this.nom = nom;
         this.prenom = prenom;
+        this.bureau = bureau;
+        this.salaire = salaire;
+        this.prime = prime;
     }
-    public abstract double Calculer_Salaire(double coefficient);
+
+    public abstract double Calculer_Salaire();
 
     public void Afficher(){
         System.out.println("les informations personnelles :");
-        System.out.print("Code :"+this.code+"Nom"+this.nom+"Prenom"+this.prenom);
+        System.out.print("Code  "+this.code+" Nom "+this.nom+" Prenom "+this.prenom+" Bureau "+this.bureau+" Salaire "+this.salaire+" Prime "+this.prime);
     }
 }
